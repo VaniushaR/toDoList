@@ -1,0 +1,22 @@
+{
+  "ToDo": [
+    {
+      "title": "task 1",
+      "responsible": "Vania",
+      "description": "Create a react.js app",
+      "priority": "high"
+    },
+    {
+      "title": "task 2",
+      "responsible": "Ana",
+      "description": "Create a prototype",
+      "priority": "medium"
+    },
+    {
+      "title": "task 3",
+      "responsible": "Mark",
+      "description": "Add some style and material design to the app",
+      "priority": "low"
+    }
+  ]
+}
