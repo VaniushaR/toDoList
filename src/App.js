@@ -33,7 +33,7 @@ class App extends Component {
     console.log(toDo);
     const toDo = this.state.toDo.map((task, i) => {
       return (
-        <div key={i}>
+        <div className="container" key={i}>
           <h3>{task.title}</h3>
           <h4>{task.priority}</h4>
           <h4>{task.responsible}</h4>

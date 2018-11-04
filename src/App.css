@@ -13,6 +13,9 @@
   height: 100vh;
 }
 
+.container {
+  background-color: rgba(240, 248, 255, 0.427);
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
