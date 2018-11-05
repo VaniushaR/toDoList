@@ -1,24 +1,49 @@
 .App {
-  background: #24c6dc; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #514a9d,
-    #24c6dc
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #514a9d,
-    #24c6dc
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 100vh;
+  display: grid;
+  grid-template: 0.5fr 6fr 0.1fr / 1fr 1fr 1fr;
+  grid-template-areas: 'App-header App-header App-header' 'form container container ' 'footer footer footer';
 }
 
+.form {
+  grid-area: form;
+  border-radius: 1%;
+  padding: 5%;
+  border: 3px solid white;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #24c6dc;
+  text-align: center;
+}
 .container {
   background-color: rgba(240, 248, 255, 0.427);
+  display: grid;
+  height: 100%;
+  grid-area: container;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+  text-align: center;
+}
+.item {
+  border: 2px solid lightblue;
+  border-radius: 5%;
 }
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 50px;
+}
+.App-title {
+  font-size: 50px;
+  font-family: 'Arial black';
+}
+.total {
+  font-family: 'Tahoma';
+}
+.App-header {
+  grid-area: App-header;
+  align-items: center;
+  color: white;
+  text-align: center;
 }
 
 @keyframes App-logo-spin {

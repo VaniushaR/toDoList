@@ -35,7 +35,7 @@ class NewTask extends Component {
 
   render() {
     return (
-      <div>
+      <div className="form">
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"

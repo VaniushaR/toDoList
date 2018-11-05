@@ -33,24 +33,53 @@ class App extends Component {
     console.log(toDo);
     const toDo = this.state.toDo.map((task, i) => {
       return (
-        <div className="container" key={i}>
-          <h3>{task.title}</h3>
-          <h4>{task.priority}</h4>
-          <h4>{task.responsible}</h4>
-          <h5>{task.description}</h5>
-          <button onClick={this.deleteTask.bind(this, i)}>Delete</button>
+        <div className="item" key={i}>
+          <div>
+            {' '}
+            <h3>Task: {task.title}</h3>
+          </div>
+
+          <div>
+            <h4>
+              Priority:
+              {task.priority}
+            </h4>{' '}
+          </div>
+
+          <div>
+            {' '}
+            <h4>
+              Responsible:
+              {task.responsible}
+            </h4>{' '}
+          </div>
+
+          <div>
+            <h5>
+              Description:
+              {task.description}
+            </h5>{' '}
+          </div>
+
+          <div>
+            {' '}
+            <button onClick={this.deleteTask.bind(this, i)}>Delete</button>
+          </div>
         </div>
       );
     });
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1>Today Vania's ToDo List</h1>
-          <span>{this.state.toDo.length}</span>
+          <h1 className="App-title">Today Vania's ToDo List </h1>
+          <div className="total">
+            <h2>Tasks: {this.state.toDo.length}</h2>
+            <img src={logo} className="App-logo" alt="logo" />
+          </div>
         </header>
         <NewTask onAddToDo={this.handleAddToDo} />
-        <div>{toDo}</div>
+        <div className="container">{toDo}</div>
+        <div className="footer">Vania Ramírez 2018</div>
       </div>
     );
   }
